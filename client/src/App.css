@@ -1,0 +1,175 @@
+/* Tema institucional IED La Victoria sobre Bootstrap 5.3.
+   Los tonos de botones y enlaces cumplen contraste 4.5:1 sobre blanco (RNF-10). */
+:root {
+  --azul: #0b2e58;
+  --azul-hover: #082140;
+  --azul-medio: #1f74b8;
+  --celeste: #2f8fd6;
+  --dorado: #c9971c;
+  --rojo: #c8102e;
+  --rojo-hover: #9e0c22;
+
+  --bs-primary: #1f74b8;
+  --bs-primary-rgb: 31, 116, 184;
+  --bs-danger: #c8102e;
+  --bs-danger-rgb: 200, 16, 46;
+  --bs-link-color: #1f74b8;
+  --bs-link-color-rgb: 31, 116, 184;
+  --bs-link-hover-color: #0b2e58;
+  --bs-link-hover-color-rgb: 11, 46, 88;
+  --bs-body-bg: #f4f6f8;
+  --bs-body-color: #1c2733;
+  --bs-border-color: #d7dde3;
+  --bs-body-font-family: "Inter", -apple-system, "Segoe UI", sans-serif;
+}
+
+.btn-primary {
+  --bs-btn-bg: #1f74b8;
+  --bs-btn-border-color: #1f74b8;
+  --bs-btn-hover-bg: #195d90;
+  --bs-btn-hover-bg: #0b2e58;
+  --bs-btn-hover-border-color: #0b2e58;
+  --bs-btn-active-bg: #082140;
+  --bs-btn-active-border-color: #082140;
+  --bs-btn-disabled-bg: #1f74b8;
+  --bs-btn-disabled-border-color: #1f74b8;
+  --bs-btn-focus-shadow-rgb: 31, 116, 184;
+}
+
+.btn-danger {
+  --bs-btn-bg: #c8102e;
+  --bs-btn-border-color: #c8102e;
+  --bs-btn-hover-bg: #9e0c22;
+  --bs-btn-hover-border-color: #9e0c22;
+  --bs-btn-active-bg: #82091b;
+  --bs-btn-active-border-color: #82091b;
+  --bs-btn-disabled-bg: #c8102e;
+  --bs-btn-disabled-border-color: #c8102e;
+  --bs-btn-focus-shadow-rgb: 200, 16, 46;
+}
+
+.btn-outline-danger {
+  --bs-btn-color: #c8102e;
+  --bs-btn-border-color: #c8102e;
+  --bs-btn-hover-bg: #c8102e;
+  --bs-btn-hover-border-color: #c8102e;
+  --bs-btn-active-bg: #9e0c22;
+  --bs-btn-active-border-color: #9e0c22;
+  --bs-btn-focus-shadow-rgb: 200, 16, 46;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--azul-medio);
+  box-shadow: 0 0 0 0.25rem rgba(31, 116, 184, 0.25);
+}
+
+/* ---------- Fondo institucional (foto del campus + velo blanco) ---------- */
+.fondo-campus {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+    url('/img/campus.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ---------- Login ---------- */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-login {
+  height: 72px;
+  width: 72px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ---------- Encabezado y pestañas ---------- */
+.app-header {
+  background: linear-gradient(120deg, var(--azul), var(--celeste));
+  border-bottom: 3px solid var(--dorado);
+  color: white;
+}
+
+.logo-colegio {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 575.98px) {
+  .logo-colegio {
+    height: 34px;
+    width: 34px;
+  }
+}
+
+.nav-underline {
+  --bs-nav-underline-link-active-color: var(--azul);
+  --bs-nav-link-color: #4a5560;
+  --bs-nav-link-hover-color: var(--azul);
+  --bs-nav-underline-gap: 1.25rem;
+}
+.nav-underline .nav-link.active,
+.nav-underline .show > .nav-link {
+  border-bottom-color: var(--dorado);
+}
+
+/* ---------- Tablas ---------- */
+.tabla-seleccionable tbody tr {
+  cursor: pointer;
+}
+
+.tabla-seleccionable tbody tr:focus-visible {
+  outline: 2px solid var(--azul-medio);
+  outline-offset: -2px;
+}
+
+/* ---------- Botón de eliminar caso ---------- */
+.btn-icono {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+/* ---------- Badges de tipo, estado y nivel ---------- */
+.badge {
+  border-radius: 999px;
+  font-weight: 600;
+  background: #eee;
+  color: #333;
+}
+.badge.tipo-I { background: #fff3cd; color: #7a5b00; }
+.badge.tipo-II { background: #ffe0b2; color: #8a4a00; }
+.badge.tipo-III { background: #f8d7da; color: #842029; }
+
+.badge.estado-Abierto { background: #f8d7da; color: #842029; }
+.badge.estado-En-seguimiento { background: #fff3cd; color: #7a5b00; }
+.badge.estado-Remitido { background: #cfe2ff; color: #0a3269; }
+.badge.estado-Cerrado { background: #d1e7dd; color: #0f5132; }
+
+.badge.estado-Pendiente { background: #fff3cd; color: #7a5b00; }
+.badge.estado-Cumplido { background: #d1e7dd; color: #0f5132; }
+.badge.estado-Incumplido { background: #f8d7da; color: #842029; }
+
+.badge.nivel-restringido { background: #f8d7da; color: #842029; }
+.badge.nivel-general { background: #d1e7dd; color: #0f5132; }

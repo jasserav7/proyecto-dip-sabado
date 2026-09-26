@@ -1,0 +1,16 @@
+:root {
+  color-scheme: light;
+  font: 15px/1.45 "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}

@@ -1,0 +1,7 @@
+node_modules
+.env
+uploads/evidencias/*
+!uploads/evidencias/.gitkeep
+uploads/remisiones/*
+!uploads/remisiones/.gitkeep
+*.log
